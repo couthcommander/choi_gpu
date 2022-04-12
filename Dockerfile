@@ -5,3 +5,8 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update -qq && apt-get dist-upgrade -y
 
 RUN apt install -y git
+
+RUN pip install datasets transformers[sentencepiece] 
+
+
+

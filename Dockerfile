@@ -6,7 +6,6 @@ RUN apt-get update -qq && apt-get dist-upgrade -y
 
 RUN apt install -y git
 
-RUN pip install datasets transformers[sentencepiece] 
-
-
-
+RUN pip install -U jupyter
+RUN pip install datasets transformers[sentencepiece] ipywidgets torch seaborn huggingface_hub
+RUN jupyter nbextension enable --py widgetsnbextension
